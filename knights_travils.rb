@@ -101,5 +101,15 @@ class KFS
         result_of_Searching_through_root(root)
     end
     #
+    
+    #Finding target obj which includes the ending position
+    def find_target_obj
+        #initialize the first root node by generating its children family
+        self.generate_family(self.root_node)
+        #This returns the object that includes the ending position
+        self.search_through(self.root_node)
+
+    end
+    #
 
 end
