@@ -11,10 +11,18 @@ class PolyTreeNode
     def children
         @children.dup
     end
-    def inspect
-        { 'value' => @value, 'parent_value' => @parent.value }.inspect
+
+    def count 
+        self.children.count
     end
-    
+    def inspect
+        # { 'value' => @value, 'parent_value' => @parent.value }.inspect
+        { 'value' => @value }.inspect
+    end
+
+    def value=(value)
+        @value = value
+    end
     def parent=(parent)
         return if self.parent == parent
         #unless parent is nill because if parent is nill it won't be able to call _children method because nil isn't an instance of the class
