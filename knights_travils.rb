@@ -101,7 +101,7 @@ class KFS
         result_of_Searching_through_root(root)
     end
     #
-    
+
     #Finding target obj which includes the ending position
     def find_target_obj
         #initialize the first root node by generating its children family
@@ -109,6 +109,20 @@ class KFS
         #This returns the object that includes the ending position
         self.search_through(self.root_node)
 
+    end
+    #
+
+    #Finding path objects of the path from starting position to the ending position
+    def find_path_objects
+        target_obj = self.find_target_obj()
+        path_objects = [target_obj]
+
+        until target_obj.nil? 
+            target_obj = target_obj.parent
+            path_objects << target_obj
+        end
+
+        path_objects[0..-2].reverse
     end
     #
 
