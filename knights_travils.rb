@@ -126,4 +126,18 @@ class KFS
     end
     #
 
+    #printing the path
+    def print_path_positions
+        path_objects = find_path_objects()
+
+        path_objects.each_with_index do |p_obj, i|
+            print "#{p_obj.value} "
+            print "=>" if i < path_objects.length - 1
+        end
+
+        puts
+        return true
+    end
+    #
+    #Hisham Elmorsi
 end
