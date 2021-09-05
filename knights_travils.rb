@@ -62,4 +62,22 @@ class KFS
     end
     #
 
+    #generation of children of any node using position changing operations
+    def generate_family(root = self.root_node)
+        ending_node = self.ending_node
+        node_position = root.value
+
+        
+        
+        root.add_child( o1( PolyTreeNode.new(node_position) ) )
+        root.add_child( o2( PolyTreeNode.new(node_position) ) )
+        root.add_child( o3( PolyTreeNode.new(node_position) ) )
+        root.add_child( o4( PolyTreeNode.new(node_position) ) )
+        root.add_child( o5( PolyTreeNode.new(node_position) ) )
+        root.add_child( o6( PolyTreeNode.new(node_position) ) )
+        root.add_child( o7( PolyTreeNode.new(node_position) ) )
+        root.add_child( o8( PolyTreeNode.new(node_position) ) )
+    end
+    #
+
 end
