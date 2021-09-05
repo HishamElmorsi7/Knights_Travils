@@ -85,4 +85,21 @@ class KFS
         root.bfs(self.ending_position)
     end
     #
+
+    #searching and generating at the same time ( horizontal ) using queue 
+    def search_through(root)
+        queue = [root]
+
+        until result_of_Searching_through_root(root)
+            node = queue.shift
+            node.children.each do |child| 
+                queue << child
+                self.generate_family(child) 
+            end
+        end
+
+        result_of_Searching_through_root(root)
+    end
+    #
+
 end
