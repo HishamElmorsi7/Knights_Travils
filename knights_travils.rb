@@ -80,4 +80,9 @@ class KFS
     end
     #
 
+    #Searching through any node using BFS Algorithm
+    def result_of_Searching_through_root(root)
+        root.bfs(self.ending_position)
+    end
+    #
 end
